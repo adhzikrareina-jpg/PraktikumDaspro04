@@ -26,6 +26,23 @@ public class StudiKasus204 {
             } else {
                 System.out.println("Status: Bukan Juara 1, 2, atau 3. Penghargaan tidak diberikan.");
             }
+        } else if (pkm) {
+            System.out.println("Jumlah dokumen: ");
+            int dokumen = sc.nextInt();
+            System.out.println("Status pendanaan PKM (1 = lolos. 0 = tidak lolos): ");
+            int status = sc.nextInt();
+
+            if (status == 1) {
+                if (dokumen == 4) {
+                    System.out.println("Status: Lolos pendanaan, dokumen lengkap. Penghargaan diberikan. ");
+                } else {
+                    System.out.println("Status: Dokumen tidak lengkap (kurang " + (4 - dokumen) + "dokumen). Penghargaan tidak diberikan.");
+                }
+            } else {
+                System.out.println("Status: Tidak lolos pendanaan PKM. Penghargaan tidak diberikan. ");
+            }
+        } else {
+            System.out.println("Status: Kegiatan lainnya tidak memperoleh penghargaan. ");
         }
     }
 }
